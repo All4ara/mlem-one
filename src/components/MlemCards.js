@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../CSS/MlemCard.css"
 
 import TinderCard from "react-tinder-card"
-import { SwipeableDrawer } from '@material-ui/core';
+
 
 function MlemCards() {
     const [profile, setProfile] = useState([
@@ -14,6 +14,16 @@ function MlemCards() {
         {
             name: "Mr. Beans",
             url: "https://s3.amazonaws.com/imagesroot.rescuegroups.org/webpages/s135nzd9yxg8imd.jpg",
+
+        },
+        {
+            name: "Sammy",
+            url: "https://bulldogguide.com/wp-content/uploads/2018/10/1018276002-612x612.jpg",
+
+        },
+        {
+            name: "Charlie",
+            url: "https://thehappypuppysite.com/wp-content/uploads/2018/10/bichon-poodle-header.jpg",
 
         },
         
