@@ -1,5 +1,7 @@
 import './App.css';
 import Header from "./components/Header"
+import MlemCards from "./components/MlemCards"
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Header />
 
       {/* MlemCards */}
+      <MlemCards /> 
 
       {/* SwipeButtons */}
 
