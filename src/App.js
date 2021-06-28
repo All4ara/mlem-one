@@ -1,15 +1,16 @@
 import './App.css';
+import Header from "./components/Header"
 
 function App() {
   return (
     // BEM class naming convention
     <div className="app">
-      <h1>Mlem one</h1>
 
       {/* Header */}
+      <Header />
 
       {/* MlemCards */}
-      
+
       {/* SwipeButtons */}
 
     </div>
