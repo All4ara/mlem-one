@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./components/Header"
 import MlemCards from "./components/MlemCards"
-
+import SwipeButtons from "./components/SwipeButtons"
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <MlemCards /> 
 
       {/* SwipeButtons */}
+      <SwipeButtons />
 
     </div>
   );
