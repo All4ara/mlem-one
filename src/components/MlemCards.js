@@ -1,33 +1,22 @@
-import React, { useState } from 'react'
-import "../CSS/MlemCard.css"
+import React, { useState, useEffect } from 'react';
+import "../CSS/MlemCard.css";
 
-import TinderCard from "react-tinder-card"
+import TinderCard from "react-tinder-card";
+import axios from '../axios';
 
 
 function MlemCards() {
-    const [profile, setProfile] = useState([
-        {
-            name: "Apollo",
-            url: "https://i.pinimg.com/originals/36/b7/ea/36b7eacfb08e8f34d079ad9453e95c95.jpg",
+    const [profile, setProfile] = useState([]);
 
-        },
-        {
-            name: "Mr. Beans",
-            url: "https://s3.amazonaws.com/imagesroot.rescuegroups.org/webpages/s135nzd9yxg8imd.jpg",
+    useEffect(() => {
+        async function fetchData() {
+            const req = await axios.get('/mlem/cards');
 
-        },
-        {
-            name: "Sammy",
-            url: "https://bulldogguide.com/wp-content/uploads/2018/10/1018276002-612x612.jpg",
+            setProfile(req.data)
+        }
 
-        },
-        {
-            name: "Charlie",
-            url: "https://www.allthingsdogs.com/wp-content/uploads/2020/09/Cockapoo-poodle-mix.jpg",
-
-        },
-        
-    ]);
+        fetchData();
+    }, []);
 
     const swiped = (direction, nameToDelete) => {
         console.log("removing " + nameToDelete);
@@ -50,7 +39,7 @@ function MlemCards() {
                         onCardLeftScreen={() => outOfFrame(pet.name)}
                     >
                         <div 
-                            style={{ backgroundImage: `url(${pet.url})` }}
+                            style={{ backgroundImage: `url(${pet.imgUrl})` }}
                             className="card"
                         >
                             <h3>{pet.name}</h3>
