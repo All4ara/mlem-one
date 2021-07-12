@@ -29,7 +29,7 @@ function MlemCards() {
 
     return (
         <div className="mlem__cards">
-            <div className="mlem__card__container">
+            <div className="card__container">
                 {profile.map((pet) => (
                     <TinderCard 
                         className="swipe"

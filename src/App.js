@@ -42,18 +42,3 @@ function App() {
 }
 
 export default App;
-
-
-        {/* Header */}
-        <Header />
-
-        {/* MlemCards */}
-        <MlemCards /> 
-
-        {/* SwipeButtons */}
-        <SwipeButtons />
-
-        {/* Chats Screen */}
-
-        {/* Individual Chats Screen */}
-        
